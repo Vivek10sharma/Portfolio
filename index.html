@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek | Fullstack Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="logo.jpg" alt="Vivek's Logo"></div>
+            <ul class="navlist">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello, I'm <span>Vivek Sharma</span></h1>
+            <p>A Fullstack Developer focused on Building intuitive and high-performance applications.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+        <div class="home-image">
+            <img src="Imgvivek.jpg" alt="Vivek's Photo">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I specialize in building visually appealing, responsive, and scalable websites. With expertise in both frontend and backend development, I create seamless digital experiences.</p>
+        <ul>
+            <li>Proficient in HTML, CSS, JavaScript</li>
+            <li>Expertise in React, Next.js</li>
+            <li>Backend skills in Node.js, Express</li>
+            <li>Database management with MongoDB & MySQL</li>
+            <li>Passion for UI/UX design</li>
+        </ul>
+    </section>
+
+    <section class="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-gallery">
+            <a href="https://github.com/Vivek10sharma/Medicure.git"><div class="portfolio-item">Project 1</div></a>
+            <a href=""><div class="portfolio-item">Project 2</div></a>
+            <a href=""><div class="portfolio-item">Project 3</div></a>
+        </div>
+    </section>
+
+    <section class="contact-cta" id="contact-cta">
+        <h2>Let's Work Together</h2>
+        <p>Have a project? Get in touch and let's bring your ideas to life.</p>
+        <a href="https://wa.me/9779865477840" class="btn">Contact Me</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vivek. All Rights Reserved.</p>
+    </footer>
+
+
+    <script>
+        window.onload = function() {
+          window.scrollTo(0, 0); 
+        };
+    
+        if (window.location.hash) {
+          history.replaceState("", document.title, window.location.pathname + window.location.search);
+        }
+      </script>
+</body>
+</html>
