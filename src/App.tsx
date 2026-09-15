@@ -35,6 +35,7 @@ function App() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [formStatus, setFormStatus] = useState('');
 
   useEffect(() => {
     setIsMounted(true);
@@ -65,6 +66,11 @@ function App() {
   }, [activeFilter]);
 
   const handleNavClick = () => setMobileOpen(false);
+
+  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormStatus('Contact form is not configured yet. Please email me directly.');
+  };
 
   return (
     <div className="app-shell">
@@ -364,7 +370,7 @@ function App() {
               </div>
             </div>
 
-            <form className="contact-form" action="#" method="post" onSubmit={(event) => event.preventDefault()}>
+            <form className="contact-form" onSubmit={handleContactSubmit}>
               <label>
                 Name
                 <input type="text" name="name" placeholder="Your name" />
@@ -380,6 +386,7 @@ function App() {
               <button type="submit" className="btn btn-primary form-btn">
                 Send Message
               </button>
+              {formStatus && <p className="form-status" role="status">{formStatus}</p>}
             </form>
           </div>
         </section>

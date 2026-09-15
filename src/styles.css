@@ -812,6 +812,13 @@ h1, h2, h3, h4, p {
   justify-self: start;
 }
 
+.form-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .site-footer {
   padding: 24px 0 34px;
   border-top: 1px solid var(--line);
